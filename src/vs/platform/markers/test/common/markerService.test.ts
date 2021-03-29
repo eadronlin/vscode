@@ -182,6 +182,7 @@ suite('Marker Service', () => {
 	});
 
 	test('Error code of zero in markers get removed, #31275', function () {
+		// @ts-ignore
 		let data = <IMarkerData>{
 			code: '0',
 			startLineNumber: 1,

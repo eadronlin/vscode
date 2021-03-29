@@ -638,6 +638,7 @@ export class WorkbenchKeybindingService extends AbstractKeybindingService {
 		}
 
 		const keycode = IMMUTABLE_CODE_TO_KEY_CODE[code];
+		// @ts-ignore
 		if (keycode !== -1) {
 			// https://github.com/microsoft/vscode/issues/74934
 			return false;

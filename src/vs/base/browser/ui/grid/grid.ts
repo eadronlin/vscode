@@ -521,6 +521,7 @@ export class SerializableGrid<T extends ISerializableView> extends Grid<T> {
 		return { type: 'branch', data: node.children.map(c => SerializableGrid.serializeNode(c, orthogonal(orientation))), size };
 	}
 
+	// @ts-ignore
 	private static deserializeNode<T extends ISerializableView>(json: ISerializedNode, orientation: Orientation, box: Box, deserializer: IViewDeserializer<T>): GridNode<T> {
 		if (!json || typeof json !== 'object') {
 			throw new Error('Invalid JSON');
@@ -558,6 +559,7 @@ export class SerializableGrid<T extends ISerializableView> extends Grid<T> {
 		throw new Error('Invalid JSON: \'type\' property must be either \'branch\' or \'leaf\'.');
 	}
 
+	// @ts-ignore
 	private static getFirstLeaf<T extends IView>(node: GridNode<T>): GridLeafNode<T> {
 		if (!isGridBranchNode(node)) {
 			return node;

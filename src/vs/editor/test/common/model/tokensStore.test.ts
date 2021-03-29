@@ -82,6 +82,7 @@ suite('TokensStore', () => {
 				const metadata = lineTokens.getMetadata(i);
 				const color = TokenMetadata.getForeground(metadata);
 				const tokenText = lineContent.substring(tokenStartCharacter, tokenEndCharacter);
+				// @ts-ignore
 				if (color === SEMANTIC_COLOR) {
 					lineText += `|${tokenText}|`;
 				} else {

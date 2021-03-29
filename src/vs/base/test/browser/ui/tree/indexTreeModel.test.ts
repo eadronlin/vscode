@@ -330,6 +330,7 @@ suite('IndexTreeModel', () => {
 
 		model.splice([0, 0], 0, [{ element: 1 }], options);
 		assert.strictEqual(list[0].collapsible, true);
+		// @ts-ignore
 		assert.strictEqual(list[1].collapsible, false);
 	}));
 

@@ -180,6 +180,7 @@ export class WindowsKeyboardMapper implements IKeyboardMapper {
 
 		for (let scanCode = ScanCode.None; scanCode < ScanCode.MAX_VALUE; scanCode++) {
 			const immutableKeyCode = IMMUTABLE_CODE_TO_KEY_CODE[scanCode];
+			// @ts-ignore
 			if (immutableKeyCode !== -1) {
 				this._scanCodeToKeyCode[scanCode] = immutableKeyCode;
 				this._keyCodeToLabel[immutableKeyCode] = KeyCodeUtils.toString(immutableKeyCode);
@@ -201,6 +202,7 @@ export class WindowsKeyboardMapper implements IKeyboardMapper {
 				const rawMapping = rawMappings[strCode];
 
 				const immutableKeyCode = IMMUTABLE_CODE_TO_KEY_CODE[scanCode];
+				// @ts-ignore
 				if (immutableKeyCode !== -1) {
 					const keyCode = NATIVE_KEY_CODE_TO_KEY_CODE[rawMapping.vkey] || KeyCode.Unknown;
 					if (keyCode === KeyCode.Unknown || immutableKeyCode === keyCode) {
@@ -337,6 +339,7 @@ export class WindowsKeyboardMapper implements IKeyboardMapper {
 		let cnt = 0;
 		result.push(`-----------------------------------------------------------------------------------------------------------------------------------------`);
 		for (let scanCode = ScanCode.None; scanCode < ScanCode.MAX_VALUE; scanCode++) {
+			// @ts-ignore
 			if (IMMUTABLE_CODE_TO_KEY_CODE[scanCode] !== -1) {
 				if (immutableSamples.indexOf(scanCode) === -1) {
 					continue;

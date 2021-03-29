@@ -192,6 +192,8 @@ suite('Types', () => {
 	test('validateConstraints', () => {
 		types.validateConstraints([1, 'test', true], [Number, String, Boolean]);
 		types.validateConstraints([1, 'test', true], ['number', 'string', 'boolean']);
+
+		// @ts-ignore
 		types.validateConstraints([console.log], [Function]);
 		types.validateConstraints([undefined], [types.isUndefined]);
 		types.validateConstraints([1], [types.isNumber]);

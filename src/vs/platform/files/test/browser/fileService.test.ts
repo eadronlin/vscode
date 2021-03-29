@@ -69,6 +69,7 @@ suite('File Service', () => {
 		assert.strictEqual(service.hasCapability(resource, FileSystemProviderCapabilities.Readonly), true);
 		assert.strictEqual(service.hasCapability(resource, FileSystemProviderCapabilities.FileOpenReadWriteClose), false);
 
+		// @ts-ignore
 		registrationDisposable!.dispose();
 
 		assert.strictEqual(service.canHandleResource(resource), false);

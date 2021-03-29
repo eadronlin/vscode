@@ -47,6 +47,7 @@ suite('Emmet', () => {
 				const languageIdentifier = new LanguageIdentifier(mode, 73);
 				const languageIdentifierResolver: ILanguageIdentifierResolver = {
 					getLanguageIdentifier: (languageId: LanguageId) => {
+						// @ts-ignore
 						if (languageId === 73) {
 							return languageIdentifier;
 						}

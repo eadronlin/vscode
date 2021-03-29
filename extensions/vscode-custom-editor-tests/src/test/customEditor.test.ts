@@ -274,6 +274,7 @@ suite('CustomEditor tests', () => {
 		// Then open a new document (hiding existing one)
 		const otherFile = vscode.Uri.file(path.join(testWorkspaceRoot.fsPath, 'other.json'));
 		await vscode.commands.executeCommand(commands.open, otherFile);
+		// @ts-ignore
 		assert.strictEqual(vscode.window.activeTextEditor!?.document.uri.toString(), otherFile.toString());
 
 		// And then back
@@ -282,6 +283,7 @@ suite('CustomEditor tests', () => {
 
 		// Make sure we have the file on as text
 		assert.ok(vscode.window.activeTextEditor);
+		// @ts-ignore
 		assert.strictEqual(vscode.window.activeTextEditor!?.document.uri.toString(), testDocument.toString());
 	});
 

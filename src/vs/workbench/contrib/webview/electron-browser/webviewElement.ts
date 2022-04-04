@@ -299,10 +299,12 @@ export class ElectronWebviewBasedWebview extends BaseWebview<WebviewTag> impleme
 		options = options || {};
 
 		// FindNext must be false for a first request
+
 		const findOptions: FindInPageOptions = {
 			forward: options.forward,
 			findNext: false,
 			matchCase: options.matchCase,
+			// @ts-ignore e2checkout
 			medialCapitalAsWordStart: options.medialCapitalAsWordStart
 		};
 

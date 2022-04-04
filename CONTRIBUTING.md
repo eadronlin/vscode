@@ -52,21 +52,13 @@ The built-in tool for reporting an issue, which you can access by using `Report 
 Please include the following with each issue:
 
 * Version of VS Code
-
 * Your operating system
-
 * List of extensions that you have installed
-
 * Reproducible steps (1... 2... 3...) that cause the issue
-
 * What you expected to see, versus what you actually saw
-
 * Images, animations, or a link to a video showing the issue occurring
-
 * A code snippet that demonstrates the issue or a link to a code repository the developers can easily pull down to recreate the issue locally
-
-  * **Note:** Because the developers need to copy and paste the code snippet, including a code snippet as a media file (i.e. .gif) is not sufficient.
-
+    * **Note:** Because the developers need to copy and paste the code snippet, including a code snippet as a media file (i.e. .gif) is not sufficient.
 * Errors from the Dev Tools Console (open from the menu: Help > Toggle Developer Tools)
 
 ### Final Checklist
@@ -74,9 +66,7 @@ Please include the following with each issue:
 Please remember to do the following:
 
 * [ ] Search the issue repository to ensure your report is a new issue
-
 * [ ] Recreate the issue after disabling all extensions
-
 * [ ] Simplify your code around the issue to better isolate the problem
 
 Don't feel bad if the developers can't reproduce the issue right away. They will simply ask for more information!

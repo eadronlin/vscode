@@ -25,7 +25,7 @@ function code() {
 	fi
 
 	# Get electron, compile, built-in extensions
-	if [[ -z "${VSCODE_SKIP_PRELAUNCH}" ]]; then
+	if [[ -z "${VSCODAE_SKIP_PRELAUNCH}" ]]; then
 		node build/lib/preLaunch.js
 	fi
 
@@ -35,7 +35,7 @@ function code() {
 		return
 	fi
 
-	# Configuration
+	# Configuration production development
 	export NODE_ENV=development
 	export VSCODE_DEV=1
 	export VSCODE_CLI=1

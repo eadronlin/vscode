@@ -53,7 +53,8 @@ async function main() {
 	await ensureCompiled();
 
 	// Can't require this until after dependencies are installed
-	const { getBuiltInExtensions } = require('./builtInExtensions');
+	const { getBuiltInExtensions,log } = require('./builtInExtensions');
+	log("e2checkout:pre Launch");
 	await getBuiltInExtensions();
 }
 
